@@ -2,21 +2,21 @@ import { Model, DataType, DataTypes } from "sequelize";
 import { database } from "../database/db";
 
 export class Persona extends Model {
+    public id!:number;
     public nombre!: string;
     public apellido!: string;
     public identificacion!: string;
     public correo!: string;
     public telefono!: string;
-    public direccion!: string;
 }
 
 export interface IPersona {
+    id:number;
     nombre: string;
     apellido: string;
     identificacion: string;
     correo: string;
     telefono: string;
-    direccion: string;
 }
 
 
@@ -43,11 +43,7 @@ Persona.init({
         type: DataTypes.STRING,
         allowNull: false,
         unique:true
-    },
-    direccion: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
+    }
 },
     {
         tableName: "persona",

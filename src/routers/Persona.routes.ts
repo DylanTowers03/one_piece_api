@@ -11,11 +11,13 @@ export class PersonaRoutes {
     }
 
     private initializeRoutes() {
-        this.router.get('/get_personas', this.personaController.getAllPersonas);
-        this.router.get('/get_persona/:id', this.personaController.getPersonaOne);
-        this.router.post('/add_persona/', this.personaController.createPersona);
-        this.router.put('/update_persona/:id', this.personaController.updatePersona);
-        this.router.delete('/delete_persona/:id', this.personaController.deletePersona);
+        this.router.get('/personas/paths', this.personaController.getApiRouter);
+        this.router.get('/personas', this.personaController.getAllPersonas);
+        this.router.get('/personas/:id', this.personaController.getPersonaOne);
+        this.router.post('/personas', this.personaController.createPersona);
+        this.router.post('/personas/usuario', this.personaController.createPersonaUsuario);
+        this.router.put('/personas/:id', this.personaController.updatePersona);
+        this.router.delete('/personas/:id', this.personaController.deletePersona);
     }
 }
 

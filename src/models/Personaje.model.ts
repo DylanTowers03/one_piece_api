@@ -7,6 +7,7 @@ export class PersonajeOnePiece extends Model{
   public nivel!: number;
   public fruta!: string;
   public rol!: string;
+  public estado!:string;
   public imagen!: string;
 }
 
@@ -15,6 +16,7 @@ export interface IPersonajeOnePiece {
   nivel: number;
   fruta: string;
   rol: string;
+  estado:string;
   imagen: string;
 }
 
@@ -32,6 +34,10 @@ PersonajeOnePiece.init({
     allowNull: false
   },
   rol: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  estado: {
     type: DataTypes.STRING,
     allowNull: false
   },

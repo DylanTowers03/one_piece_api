@@ -29,6 +29,7 @@ export class App{
         this.app.use('/api',this.Routes.routerPersona.router)
         this.app.use('/api',this.Routes.routerPersonaje.router)
         this.app.use('/api',this.Routes.routerUsuario.router)
+        this.app.use('/api',this.Routes.routerAll_Api_Router.router)
     }
 
     async start() {

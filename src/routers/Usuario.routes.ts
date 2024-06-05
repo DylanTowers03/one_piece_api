@@ -11,11 +11,12 @@ export class UsuarioRoutes {
     }
 
     private initializeRoutes() {
-        this.router.get('/get_usuarios', this.usuarioController.getAllUsuarios);
-        this.router.get('/get_usuario/:id', this.usuarioController.getUsuarioById);
-        this.router.post('/add_usuario', this.usuarioController.createUsuario);
-        this.router.put('/update_usuario/:id', this.usuarioController.updateUsuario);
-        this.router.delete('/delete_usuario/:id', this.usuarioController.deleteUsuario);
+        this.router.get('/usuarios/paths', this.usuarioController.getApiRouter);
+        this.router.get('/usuarios', this.usuarioController.getAllUsuarios);
+        this.router.get('/usuarios/:id', this.usuarioController.getUsuarioById);
+        this.router.post('/usuarios', this.usuarioController.createUsuario);
+        this.router.put('/usuarios/:id', this.usuarioController.updateUsuario);
+        this.router.delete('/usuarios/:id', this.usuarioController.deleteUsuario);
         this.router.get('/auth_usuario/:username/:password', this.usuarioController.authUsuario);
     }
 }
