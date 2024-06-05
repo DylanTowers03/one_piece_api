@@ -11,7 +11,6 @@ export class PersonaRoutes {
     }
 
     private initializeRoutes() {
-        this.router.get('/personas/paths', this.personaController.getApiRouter);
         this.router.get('/personas', this.personaController.getAllPersonas);
         this.router.get('/personas/:id', this.personaController.getPersonaOne);
         this.router.post('/personas', this.personaController.createPersona);

@@ -127,58 +127,5 @@ export default class UsuarioController {
         }
     }
 
-    public async getApiRouter(req: Request, res: Response) {
-        try {
-            res.status(200).json({
-                usuarios: [
-                    {
-                        GET: "http://158.247.124.44:4000/api/usuarios/",
-                        DESCRIPTION: "obtener todos los usuarios",
-                        body: [
-                            {
-                                id: 1,
-                                createdAt: "2024-06-03T02:20:50.000Z",
-                                updatedAt: "2024-06-03T02:20:50.000Z"
-                            },
-                            {
-                                id: 2,
-                                createdAt: "2024-06-03T02:21:01.000Z",
-                                updatedAt: "2024-06-03T02:21:01.000Z"
-                            },
-                        ]
-                    },
-                    {
-                        GET: "http://158.247.124.44:4000/api/usuarios/{id}",
-                        DESCRIPTION: "obtener un usuario",
-                        body: {
-                            id:1,
-                            createdAt: "2024-06-03T02:20:50.000Z",
-                            updatedAt: "2024-06-03T02:20:50.000Z"
-                        }
-                    },
-                    {
-                        POST: "http://158.247.124.44:4000/api/usuarios/",
-                        DESCRIPTION: "crear un usuario",
-                        body: {
-                            PersonaId: 1,
-                            createdAt: "2024-06-03T02:20:50.000Z",
-                            updatedAt: "2024-06-03T02:20:50.000Z"
-                        }
-                    },
-                    {
-                        PUT: "http://158.247.124.44:4000/api/usuarios/{id}",
-                        DESCRIPTION: "actualizar un usuario",
-                        body: {
-                            PersonaId: 1,
-                            createdAt: "2024-06-03T02:20:50.000Z",
-                            updatedAt: "2024-06-03T02:20:50.000Z"
-                        }
-                    }
-                ]
-            })
-        } catch (error) {
-            res.status(500).json({ error: `error en la soicitud getAllApiRoueter ${error}` })
-        }
-    }
-
+   
 }

@@ -11,7 +11,6 @@ export class UsuarioRoutes {
     }
 
     private initializeRoutes() {
-        this.router.get('/usuarios/paths', this.usuarioController.getApiRouter);
         this.router.get('/usuarios', this.usuarioController.getAllUsuarios);
         this.router.get('/usuarios/:id', this.usuarioController.getUsuarioById);
         this.router.post('/usuarios', this.usuarioController.createUsuario);

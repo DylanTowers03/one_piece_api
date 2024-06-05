@@ -11,7 +11,6 @@ export class PersonajeRoutes {
     }
 
     private initializeRoutes() {
-        this.router.get('/personajes/paths', this.personajeController.getApiRouter);
         this.router.get('/personajes', this.personajeController.getAllPersonajes);
         this.router.get('/personajes/:id', this.personajeController.getPersonajeById);
         this.router.post('/personajes/', this.personajeController.createPersonaje);
