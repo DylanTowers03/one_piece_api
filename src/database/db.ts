@@ -1,15 +1,15 @@
 const { Sequelize } = require('sequelize');
 
-const DB_NAME = 'one_piece';
-const DB_USER = 'root';
-const DB_PASS = 'Leinerhc_20@';
+const DB_NAME = 'api_movil';
+const DB_USER = 'ingtorres';
+const DB_PASS = 'Mysql123*';
 
 export const database = new Sequelize(
     DB_NAME,
     DB_USER,
     DB_PASS,
     {
-        host: 'localhost',
+        host: '149.130.168.226',
         dialect: 'mysql',
         port: 3306
     }

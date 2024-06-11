@@ -1,53 +1,51 @@
 import { DataTypes, Model } from 'sequelize';
 import { database } from '../database/db';
 
-
-export class PersonajeOnePiece extends Model{
+export class JugadorNBA extends Model {
   public nombre!: string;
-  public nivel!: number;
-  public fruta!: string;
-  public rol!: string;
-  public estado!:string;
+  public altura!: number;
+  public posicion!: string;
+  public equipo!: string;
+  public playera!: number;
   public imagen!: string;
 }
 
-export interface IPersonajeOnePiece {
+export interface IJugadorNBA {
   nombre: string;
-  nivel: number;
-  fruta: string;
-  rol: string;
-  estado:string;
+  altura: number;
+  posicion: string;
+  equipo: string;
+  playera: number;
   imagen: string;
 }
 
-PersonajeOnePiece.init({
+JugadorNBA.init({
   nombre: {
     type: DataTypes.STRING,
     allowNull: false
   },
-  nivel: {
+  altura: {
+    type: DataTypes.FLOAT,
+    allowNull: false
+  },
+  posicion: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  equipo: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  playera: {
     type: DataTypes.INTEGER,
-    allowNull: false
-  },
-  fruta: {
-    type: DataTypes.STRING,
-    allowNull: false
-  },
-  rol: {
-    type: DataTypes.STRING,
-    allowNull: false
-  },
-  estado: {
-    type: DataTypes.STRING,
     allowNull: false
   },
   imagen: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: true
   }
 }, {
   sequelize: database,
-  tableName: 'personaje_one_piece',
-  timestamps:true
+  tableName: 'jugadores',
+  timestamps: true
 });
-

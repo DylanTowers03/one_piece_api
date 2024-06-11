@@ -27,7 +27,7 @@ export class App{
 
     private routes(){
         this.app.use('/api',this.Routes.routerPersona.router)
-        this.app.use('/api',this.Routes.routerPersonaje.router)
+        this.app.use('/api',this.Routes.routerPlayer.router)
         this.app.use('/api',this.Routes.routerUsuario.router)
     }
 

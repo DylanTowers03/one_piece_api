@@ -1,10 +1,10 @@
 import { PersonaRoutes } from "./Persona.routes";
-import { PersonajeRoutes } from "./PersonajeOnePiece.routes";
+import { PlayerRoutes } from "./Player.routes";
 import { UsuarioRoutes } from "./Usuario.routes";
 
 
 export default class indexRoutes{
     public routerPersona=new PersonaRoutes()
-    public routerPersonaje=new PersonajeRoutes()
+    public routerPlayer=new PlayerRoutes()
     public routerUsuario=new UsuarioRoutes()
 }
